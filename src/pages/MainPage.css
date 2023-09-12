@@ -1,0 +1,16 @@
+.wrapper {
+  padding: 3rem var(--spacing);
+}
+
+.search-filter-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media (min-width: 800px) {
+  .search-filter-box {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

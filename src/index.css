@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --ff: "Nunito Sans", sans-serif;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.25rem;
+
+  --fw-sm: 300;
+  --fw-md: 600;
+  --fw-lg: 800;
+
+  --background: 0, 0%, 98%;
+  --primary-text: 200, 15%, 8%;
+  --secondary-text: 0, 0%, 52%;
+  --accent: 0, 0%, 100%;
+
+  --shadow: 1px 1px 10px hsla(var(--secondary-text), 0.2);
+
+  --spacing: 1.25rem;
+  --radius: 5px;
+}
+
+[data-theme="dark"] {
+  --background: 207, 26%, 17%;
+  --primary-text: 0, 0%, 100%;
+  --accent: 209, 23%, 22%;
+  --secondary-text: 200, 15%, 8%;
+  --shadow: 1px 1px 10px hsla(var(--secondary-text), 0.3);
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-sm: 1rem;
+    --fs-md: 1.125rem;
+    --fs-lg: 1.25rem;
+    --fs-xl: 1.625rem;
+
+    --spacing: 5rem;
+  }
+}
+
+body {
+  font-family: var(--ff);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-sm);
+  background-color: hsl(var(--background));
+  color: hsl(var(--primary-text));
+}
+
+.custom-input,
+.custom-select {
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  height: 3.5rem;
+  background-color: hsl(var(--accent));
+  overflow: hidden;
+}

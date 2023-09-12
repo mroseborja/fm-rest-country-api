@@ -1,0 +1,22 @@
+.filter__box {
+  width: 60%;
+  max-width: 260px;
+}
+
+.filter__box select {
+  appearance: none;
+  background-color: inherit;
+  border: none;
+  padding-inline: 1.5rem;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-md);
+  color: inherit;
+}
+
+.filter__box select:focus {
+  outline: none;
+  border: 2px solid hsl(var(--primary-text), 0.5);
+}

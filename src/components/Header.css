@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem var(--spacing);
+  box-shadow: var(--shadow);
+  background-color: hsl(var(--accent));
+}
+
+.header__title {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-lg);
+}
+
+.header__toggle-mode {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-md);
+}
+
+.header__toggle-mode a {
+  text-decoration: none;
+  color: inherit;
+}
