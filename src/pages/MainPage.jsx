@@ -5,7 +5,7 @@ import Filter from "../components/Filter";
 import Search from "../components/Search";
 import { useLoaderData } from "react-router-dom";
 
-function App() {
+function MainPage() {
   const countriesData = useLoaderData();
 
   const [searchCountry, setSearchCountry] = useState("");
@@ -28,17 +28,17 @@ function App() {
 
   return (
     <>
-      <section className="search-filter-box">
+      <div className="search-filter-box">
         <Search onChange={searchedWord} />
         <Filter regions={regions} selectedRegion={selectedRegion} />
-      </section>
+      </div>
 
       <CountryCardList data={countries} />
     </>
   );
 }
 
-export default App;
+export default MainPage;
 
 export async function loader() {
   const response = await fetch("https://restcountries.com/v3.1/all");

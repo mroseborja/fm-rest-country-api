@@ -23,11 +23,10 @@ const DarkModeToggle = () => {
 
   return (
     <h2 className="header__toggle-mode">
-      {theme === "light" ? (
-        <ion-icon name="moon-outline"></ion-icon>
-      ) : (
-        <ion-icon name="sunny-outline"></ion-icon>
-      )}
+      <ion-icon
+        name={theme === "light" ? "moon-outline" : "sunny-outline"}
+        aria-label="icon"
+      ></ion-icon>
 
       <a href="#" onClick={switchTheme}>
         {theme === "light" ? "Dark Mode" : "Light Mode"}

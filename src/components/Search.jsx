@@ -12,7 +12,7 @@ const Search = ({ onChange }) => {
         type="text"
         placeholder="Search for a country..."
         onChange={handleChange}
-        aria-label="Search"
+        aria-label="Search a country"
       />
     </div>
   );

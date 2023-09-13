@@ -5,7 +5,7 @@ const Filter = ({ regions, selectedRegion }) => {
 
   return (
     <div className="filter__box custom-select" tabIndex="-1">
-      <select onChange={handleChangeRegion}>
+      <select onChange={handleChangeRegion} aria-label="Select Region">
         <option value="0" hidden>
           Filter by Region
         </option>

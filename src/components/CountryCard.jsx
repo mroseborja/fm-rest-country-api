@@ -9,7 +9,6 @@ const CountryCard = ({ countryDetails }) => {
           className="card__img"
           src={countryDetails.flags.png}
           alt={countryDetails.name.common}
-          loading="lazy"
         />
       </picture>
       <div className="card__text">
