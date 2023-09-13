@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         loader: MainPageLoader,
       },
       {
-        path: "country/:name",
+        path: "country/:code",
         element: <CountryDetail />,
         loader: CountryDetailLoader,
       },

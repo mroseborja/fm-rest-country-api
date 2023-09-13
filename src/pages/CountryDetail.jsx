@@ -83,7 +83,7 @@ export default CountryDetail;
 
 export async function loader({ params }) {
   const response = await fetch(
-    `https://restcountries.com/v3.1/name/${params.name}?fullText=true`
+    `https://restcountries.com/v3.1/alpha/${params.code}`
   );
   const data = await response.json();
   const [first] = data;

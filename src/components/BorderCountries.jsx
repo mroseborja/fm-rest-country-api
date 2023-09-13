@@ -12,7 +12,7 @@ const BorderCountries = ({ borders = [] }) => {
           .then((response) => response.json())
           .then((data) => {
             const result = data.map((country) => {
-              return country.name.common;
+              return { code: country.cca3, name: country.name.common };
             });
             setBorderCountries(result);
           });
@@ -21,14 +21,15 @@ const BorderCountries = ({ borders = [] }) => {
     fetchData();
   }, [borderCode]);
 
+  console.log(borderCountries);
   return (
     <div className="country-detail__border-countries">
       <p>Border Countries: </p>
       <div className="button-group">
         {borderCountries.length !== 0 ? (
           borderCountries.map((item) => (
-            <Button key={item} link={`/country/${item}`}>
-              <span>{item}</span>
+            <Button key={item.code} link={`/country/${item.code}`}>
+              <span>{item.name}</span>
             </Button>
           ))
         ) : (

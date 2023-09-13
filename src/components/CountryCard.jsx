@@ -13,7 +13,7 @@ const CountryCard = ({ countryDetails }) => {
       </picture>
       <div className="card__text">
         <h3 className="card__title">
-          <Link to={`/country/${countryDetails.name.common}`}>
+          <Link to={`/country/${countryDetails.cca3}`}>
             {countryDetails.name.common}
           </Link>
         </h3>
